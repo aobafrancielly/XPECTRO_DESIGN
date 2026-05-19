@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Cotação | Xpectro Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #0F0F12;
+            color: #F8F9FA;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: rgba(15, 15, 18, 0.8);
+            border-bottom: 1px solid rgba(138, 43, 226, 0.1);
+            backdrop-filter: blur(12px);
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #F8F9FA;
+            text-decoration: none;
+        }
+
+        .logo span { color: #9D4EDD; }
+
+        .btn-voltar {
+            text-decoration: none;
+            color: #A0A0B0;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-voltar:hover { color: #9D4EDD; }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 8%;
+            background: radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.08), transparent 70%);
+        }
+
+        .form-container {
+            background-color: #16161F;
+            border: 1px solid rgba(138, 43, 226, 0.15);
+            padding: 40px;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        .form-container h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .form-container h2 span { color: #9D4EDD; }
+
+        .form-container p {
+            color: #A0A0B0;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            color: #F8F9FA;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            background-color: #0F0F12;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 16px;
+            border-radius: 6px;
+            color: #F8F9FA;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #9D4EDD;
+            box-shadow: 0 0 8px rgba(138, 43, 226, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-enviar {
+            background-color: #8A2BE2;
+            color: #F8F9FA;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .btn-enviar:hover {
+            background-color: #9D4EDD;
+            box-shadow: 0 6px 20px rgba(138, 43, 226, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">XD<span>.</span></a>
+        <a href="index.html" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar</a>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Vamos criar algo <span>incrível</span>?</h2>
+            <p>Preencha os campos abaixo para entendermos a necessidade do seu projeto e montarmos uma cotação personalizada.</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nome">Seu Nome / Nome da Empresa</label>
+                    <input type="text" id="nome" placeholder="Ex: João Silva" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail de Contato</label>
+                    <input type="email" id="email" placeholder="Ex: joao@empresa.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo">Tipo de Projeto</label>
+                    <select id="tipo" required>
+                        <option value="" disabled selected>Selecione uma opção...</option>
+                        <option value="landing-page">Landing Page de Alta Conversão</option>
+                        <option value="portfolio">Site Institucional / Portfólio</option>
+                        <option value="ecommerce">Loja Virtual (E-commerce)</option>
+                        <option value="ui-design">Apenas o Design da Interface (Figma)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Descrição do que você deseja no site</label>
+                    <textarea id="mensagem" placeholder="Conte um pouco sobre seu negócio, quais seções precisa e referências visuais que você gosta..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Solicitação</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

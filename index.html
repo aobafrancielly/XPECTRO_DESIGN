@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xpectro Design | XD Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    <div id="bg-glow"></div>
+    <header>
+        <a href="#" class="logo">XD<span>.</span></a>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#trabalho">Mapeamento</a></li>
+                <li><a href="cotacao.html" class="btn-nav">Fazer Cotação</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre" class="hero-xd">
+            <div class="minimal-intro">
+                <span class="tag-estudio">XD Studio | </span>
+                <h1>XPECTRO DESIGN</h1>
+                <p class="minimal-sub">Interfaces de alta fidelidade. Desenvolvimento focado em usabilidade, precisão e contraste.</p>
+            </div>
+            
+            <div class="hero-graphic">
+                <img src="media/unnamed.png" alt="Espectro de Luz Abstrato" class="flying-prism">
+            </div>
+        </section>
+
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <h2>Xpectro Design <span>•</span> UX/UI <span>•</span> Web Development <span>•</span> High Fidelity <span>•</span>&nbsp;</h2>
+                <h2>Xpectro Design <span>•</span>&nbsp; UX/UI <span>•</span> Web Development <span>•</span> High Fidelity <span>•</span>&nbsp;</h2>
+            </div>
+        </div>
+
+        <section id="trabalho" class="section-default-dark">
+            <h2 class="section-title">Como a <span>XD</span> se estrutura</h2>
+            
+            <div class="pilares-grid">
+                <div class="pilar-card">
+                    <div class="pilar-header">
+                        <span class="pilar-number">01 / PRECISÃO</span>
+                        <span class="pilar-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <h3>Alinhamento Milimétrico.</h3>
+                    <p>Tipografia limpa e estruturas sob medida. Desenvolvemos códigos CSS inteligentes onde cada elemento obedece a um propósito técnico e estético.</p>
+                </div>
+
+                <div class="pilar-card">
+                    <div class="pilar-header">
+                        <span class="pilar-number">02 / CRIATIVIDADE</span>
+                        <span class="pilar-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <h3>Fuga do Tradicional.</h3>
+                    <p>Design conceitual levado a sério. Usamos o impacto do preto profundo com o roxo elétrico para prender a atenção do usuário de forma imediata.</p>
+                </div>
+
+                <div class="pilar-card">
+                    <div class="pilar-header">
+                        <span class="pilar-number">03 / RESULTADO</span>
+                        <span class="pilar-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <h3>Foco em Conversão.</h3>
+                    <p>Estética com objetivo. Projetamos a jornada do usuário (UX) para criar caminhos eficientes que geram conexões reais de negócios.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2026 Xpectro Design. Ribeirão Preto, SP.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-behance"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:contato@xpectrodesign.com"><i class="far fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const glow = document.getElementById('bg-glow');
+            glow.style.setProperty('--mouse-x', `${e.clientX}px`);
+            glow.style.setProperty('--mouse-y', `${e.clientY}px`);
+        });
+    </script>
+</body>
+</html>
