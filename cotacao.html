@@ -22,20 +22,22 @@
             <h2>Vamos criar algo <span>incrível</span>?</h2>
             <p>Preencha os campos abaixo para entendermos a necessidade do seu projeto e montarmos uma cotação personalizada.</p>
             
-            <form action="#" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="3ed0bd4b-08c8-4b97-bcf8-4a21043f0e87">
+                
                 <div class="form-group">
                     <label for="nome">Seu Nome / Nome da Empresa</label>
-                    <input type="text" id="nome" placeholder="Ex: João Silva" required>
+                    <input type="text" id="nome" name="Nome" placeholder="Ex: João Silva" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">E-mail de Contato</label>
-                    <input type="email" id="email" placeholder="Ex: joao@empresa.com" required>
+                    <input type="email" id="email" name="Email" placeholder="Ex: joao@empresa.com" required>
                 </div>
 
                 <div class="form-group">
                     <label for="tipo">Tipo de Projeto</label>
-                    <select id="tipo" required>
+                    <select id="tipo" name="Tipo de Projeto" required>
                         <option value="" disabled selected>Selecione uma option...</option>
                         <option value="landing-page">Landing Page de Alta Conversão</option>
                         <option value="portfolio">Site Institucional / Portfólio</option>
@@ -46,7 +48,7 @@
 
                 <div class="form-group">
                     <label for="mensagem">Descrição do que você deseja no site</label>
-                    <textarea id="mensagem" placeholder="Conte um pouco sobre seu negócio, quais seções precisa e referências visuais que você gosta..." required></textarea>
+                    <textarea id="mensagem" name="Mensagem" placeholder="Conte um pouco sobre seu negócio, quais seções precisa e referências visuais que você gosta..." required></textarea>
                 </div>
 
                 <button type="submit" class="btn-enviar">Enviar Solicitação</button>
